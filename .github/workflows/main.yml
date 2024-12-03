@@ -23,5 +23,5 @@ jobs:
           REPOSITORY: ecr-lambda-repo
           IMAGE_TAG: ${{ github.sha }}
         run: |
-          docker build -t $REGISTRY/$REPOSITORY:$IMAGE_TAG . -f ./docker
+          docker build -t $REGISTRY/$REPOSITORY:$IMAGE_TAG . -f ./docker/DockerFile
           docker push $REGISTRY/$REPOSITORY:$IMAGE_TAG
